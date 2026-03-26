@@ -1,13 +1,49 @@
-# Non-Goals
+## Non-Goals
 
-To maintain a tight scope and stay true to our philosophy, `claude-mileage` explicitly avoids the following:
+To keep the project focused, predictable, and aligned with its purpose, `claude-mileage` explicitly avoids the following:
 
-- **Rate Limit Evasion:** We will never implement features that attempt to bypass, trick, or "hack" Anthropic’s usage limits.
-- **Unlimited Usage:** This tool does not provide free or unlimited access to Claude.
-- **SaaS/Hosted Platform:** There will be no `claude-mileage.com`. This is a local-only CLI tool.
-- **Account/Proxy Reselling:** We do not and will never sell access to Claude or proxy Anthropic accounts.
-- **Multi-Agent Orchestration Bloat:** We are not building "AutoGPT" for Claude. We focus on single-task efficiency for human-driven workflows.
-- **Jailbreaking:** We do not provide prompts or tools designed to circumvent safety filters or model alignment.
-- **Billing Management:** We do not touch your Anthropic billing or subscription settings.
-- **Replacing Anthropic Services:** We are not a replacement for any of Anthropic’s services or plans. This is a local-only CLI wrapper, not a substitute for the official product experience.
-- **Enterprise Features:** We do not provide enterprise-level orchestration, security features, or multi-user collaboration tools.
+### No Limit Circumvention
+- This project does not attempt to bypass, evade, or alter Anthropic’s usage limits, rate limits, or safeguards.
+- It does not introduce hidden behavior intended to extend system-level capacity.
+
+### No “Unlimited” Claims
+- This tool does not provide unlimited usage or expanded access.
+- It does not change how Anthropic’s systems allocate or enforce usage.
+
+### No Hosted or SaaS Offering
+- This is a local CLI tool only.
+- There is no hosted service, backend platform, or remote execution layer.
+
+### No Account or Access Redistribution
+- This project does not sell, share, or proxy Claude access.
+- It does not manage credentials or provide pooled usage.
+
+### No Automation-Heavy Agent Systems
+- This is not a multi-agent framework or orchestration system.
+- The focus is on improving single-task, human-driven workflows.
+
+### No Safety Filter Workarounds
+- The project does not include prompts, techniques, or tooling designed to bypass model safety systems or intended behavior.
+
+### No Billing or Subscription Control
+- This tool does not interact with Anthropic billing, subscriptions, or account configuration.
+- All usage remains governed by the user’s own account.
+
+### Not a Replacement for Claude
+- This project does not replace Claude or any Anthropic service.
+- It operates as a wrapper that prepares inputs and then calls the official Claude CLI.
+
+### No Enterprise Platform Features
+- This project does not aim to provide enterprise-grade infrastructure, multi-user systems, or organizational tooling.
+
+---
+
+## Scope Reminder
+
+`claude-mileage` exists to:
+
+- reduce unnecessary context and repetition  
+- encourage smaller, more focused interactions  
+- improve workflow efficiency within normal usage  
+
+Nothing more.
