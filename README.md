@@ -40,17 +40,17 @@
   [ RESULT + MEMORY + CACHE ]
 ```
 
-## 🎯 Who it is For
+## Who it is For
 - **Disciplined Systems Thinkers:** Users who want local, inspectable memory, tight context control, and repeatable workflows.
 - **High-Velocity Prompting:** Users who just want "smarter defaults" so the CLI handles context selection and output formatting automatically.
 
-## ✨ Core Features
+## Core Features
 - **Stateless-by-Default:** Clears cloud thread history frequently; moves project state to local files.
 - **Local Memory:** Maintains a project brief and history log in `.mileage/`.
 - **Diff-First Coding:** Forces targeted patches instead of expensive full-file rewrites.
 - **Context Preview:** See your token cost and selected snippets before you hit send.
 
-## 🚀 Status & Implementation
+## Status & Implementation
 This project is currently in its **Documentation-First** phase. We are defining the system architecture and command models before committing to the first implementation scaffold.
 
 [View the Roadmap](./ROADMAP.md) | [Read the Creator's Note](./CREATORS_NOTE.md)
