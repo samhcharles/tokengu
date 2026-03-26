@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.env
+.mileage/
+*.log
+.DS_Store
