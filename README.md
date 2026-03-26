@@ -1,4 +1,4 @@
-# claude-mileage
+# claude-mileage (token-tengu)
 
 > **Better mileage for Claude CLI workflows.**  
 > An unofficial, open-source local wrapper for Claude CLI focused on usage efficiency.
