@@ -1,55 +1,59 @@
-# claude-mileage
+# claude-mileage 👺
+
+<!-- BANNER_START -->
+<!-- [Placeholder: Future project banner or terminal-style logo] -->
+<!-- BANNER_END -->
 
 > **Better mileage for Claude CLI workflows.**  
-> An unofficial, open-source local wrapper for Claude CLI focused on usage efficiency.
+> An unofficial local preparation layer focused on reducing context waste and improving task discipline.
+
+[![Status: Documentation-First](https://img.shields.io/badge/Status-Documentation--First-blue)](#roadmap)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 ---
 
 ### ⚠️ UNOFFICIAL COMMUNITY PROJECT
 **This is an unofficial, community-driven open-source project.**
-- It is **NOT** affiliated with, endorsed by, sponsored by, or supported by Anthropic.
-- It does **NOT** provide Claude access; you must have your own Claude account/subscription and the Claude CLI installed.
-- It does **NOT** bypass, circumvent, or defeat usage limits.
-- It is a local workflow wrapper designed to help you use your existing Claude CLI workflow more efficiently.
-- See [DISCLAIMER.md](./DISCLAIMER.md) and [TRADEMARK_NOTICE.md](./TRADEMARK_NOTICE.md) for full details.
+- Not affiliated with, endorsed by, or supported by Anthropic.
+- Requires your own Claude account/subscription and the official Claude CLI.
+- Does not bypass, circumvent, or defeat usage limits.
+- See [DISCLAIMER.md](./DISCLAIMER.md) for full details.
 
 ---
 
-## The Thesis
-`claude-mileage` is an unofficial, open-source local wrapper for the Claude CLI. It is built for users who want to improve the efficiency of their existing workflow by reducing waste in context, output, and task flow.
+## 👺 The Token-Tengu Identity
+`claude-mileage` is guarded by the **token-tengu 👺**—a subtle, disciplined identity for your terminal. It represents a shift from "brute-force context" to "surgical precision." It is built for those who want to get more useful work out of the workflow they already use.
 
-Most usage is often spent on unnecessary context, repeated raw data, and "chatty" thread histories. We believe in **mileage**: the practice of getting higher utility out of your message limit through better discipline and local-first tooling.
+## 🛠️ How it Works
+`claude-mileage` acts as a local pre-processor. It prepares your prompts, selects the right context, and compacts data **before** calling the official binary.
 
-> **Note on "Mileage over Max":** This is our internal shorthand for an efficiency-first workflow philosophy. It does not imply opposition to Anthropic’s pricing or a replacement for any Anthropic subscription tier. It simply means we prioritize reducing waste in the workflow a user already uses.
+### The Pipeline
+```text
+  [ PROMPT / DIFF / FILES ]
+             ↓
+    ( Context Selection )  ←— Filter out boilerplate/unrelated noise
+             ↓
+    ( Context Compaction ) ←— Generate local summaries/interfaces
+             ↓
+    [   CLAUDE CLI BIN   ] ←— Official execution via your account
+             ↓
+  [ RESULT + MEMORY + CACHE ]
+```
 
-## What it is
-A terminal-native wrapper and workflow layer for the Claude CLI that encourages efficient usage habits:
-- **Tighter Context:** Automated pruning and context preview before sending.
-- **Smaller Tasks:** Breaking large requests into high-probability successes.
-- **Local Memory:** Keeping project-specific state locally instead of in the thread history.
-- **Summarization Pipeline:** Feeding Claude summaries of previous work instead of raw logs.
-- **Diff-First Coding:** Focused code updates that minimize output tokens.
-- **Launcher Mode:** (Optional) An opt-in dispatcher that lets `claude` act as a gateway to either the normal CLI or Mileage mode.
+## 🎯 Who it is For
+- **Disciplined Systems Thinkers:** Users who want local, inspectable memory, tight context control, and repeatable workflows.
+- **High-Velocity Prompting:** Users who just want "smarter defaults" so the CLI handles context selection and output formatting automatically.
 
-## What it does NOT do
-- It does **not** provide Claude access or sell Claude usage.
-- It does **not** bypass, alter, or defeat Anthropic’s limits, billing, or policies.
-- It does **not** proxy Anthropic accounts or subscriptions.
-- It does **not** replace the official Claude CLI; it prepares prompts locally and calls the real binary.
+## ✨ Core Features
+- **Stateless-by-Default:** Clears cloud thread history frequently; moves project state to local files.
+- **Local Memory:** Maintains a project brief and history log in `.mileage/`.
+- **Diff-First Coding:** Forces targeted patches instead of expensive full-file rewrites.
+- **Context Preview:** See your token cost and selected snippets before you hit send.
 
-## Who it is for
-- Terminal-native developers and writers.
-- Claude Pro ($20/mo) subscribers in the US/supported regions.
-- People who want better ROI on their daily message allotment.
-- Users who prefer local, inspectable, and hackable tools.
+## 🚀 Status & Implementation
+This project is currently in its **Documentation-First** phase. We are defining the system architecture and command models before committing to the first implementation scaffold.
 
-## Who it is NOT for
-- Enterprise users with uncapped budgets.
-- Users looking for "jailbreaks" or TOS-evasive tools.
-- People who want a GUI-first "AI Platform."
-
-## Fully Open Source & Community Driven
-This project is built in public. We welcome contributors who care about CLI UX, efficiency-first workflows, and keeping AI tools local and honest. If you have a better strategy for reducing context waste or a cleaner way to handle local memory, we want your PRs.
+[View the Roadmap](./ROADMAP.md) | [Read the Creator's Note](./CREATORS_NOTE.md)
 
 ---
-**Trademark Notice:** "Claude" is a trademark of Anthropic. This project uses the name nominatively to describe compatibility and its function as a wrapper for the Claude CLI.
+**Trademark Notice:** "Claude" and related marks are trademarks of Anthropic PBC. Used nominatively for compatibility description.

@@ -1,35 +1,29 @@
 # Technical Specification (v1)
 
-## System Architecture
-`claude-mileage` acts as a middleware between the user and the `claude` binary. It intercepts commands, processes context, and manages local state before forwarding the final payload to the official CLI.
+## 🏗️ System Architecture
+`claude-mileage` (token-tengu 👺) is a local Node.js wrapper that sits between the user and the official `claude` binary. It is designed to be a "Zero-Dependency-on-API" tool—it interacts strictly with the CLI.
 
-## Install Modes
-1. **Side-by-Side:** The user runs `claude-mileage <command>`.
-2. **Launcher Mode (Opt-in):** The `claude` command is replaced by a dispatcher. When run without arguments, it shows a picker:
-   - `› Claude (Normal)`
-   - `  Claude Mileage`
-   - This mode preserves the original binary path for easy rollback.
+## 📦 Core Pipeline Components
 
-## Core Components
-### 1. Context Pipeline
-- **Pruning:** Automatically removes comments, docstrings (if requested), or unrelated functions from code snippets.
-- **Preview:** Shows a token estimate and a "context summary" before the user hits Enter.
-- **Rules:** Applies `CONTEXT_RULES.md` to every outbound message.
+### 1. Request Shaper (The Pre-Processor)
+- **Automatic Pruning:** Uses basic heuristics (or language-specific rules) to strip comments, imports, and boilerplate from code context.
+- **Prompt Injection:** Prepend local memory (`brief.md`) and append formatting instructions (e.g., "Respond only with a patch").
+- **Intervention UI:** A simple CLI confirmation screen showing:
+  - Estimated tokens.
+  - Files included.
+  - The final shaped prompt.
 
-### 2. Local Memory Model
-- Stores "Project Briefs" and "Last Action" summaries in a `.mileage/` directory.
-- Injects relevant snippets into the prompt to replace long-term thread history.
+### 2. Local State Management (.mileage/)
+A project-root directory containing:
+- `brief.md`: Human/AI-maintained project overview.
+- `history.log`: Compact summary of past successful steps.
+- `cache/`: Local file summaries and interface signatures.
 
-### 3. Compaction Engine
-- Converts raw file content into "Compact Reps" (e.g., just the function signatures).
-- Encourages `diff` output instead of full file rewrites.
+### 3. Execution Wrapper
+- **Binary Call:** Spawns a child process of the official `claude` binary.
+- **Stream Capture:** Pipes Claude's output back to the user while capturing it locally for the `history.log` update.
 
-## Behavioral Guardrails
-- **Refuse Bloat:** If a user tries to send more than X files, warn them and suggest a `compact` command first.
-- **No-Retry Policy:** Discourage mindless "try again" prompts. Force a "What changed in your intent?" prompt instead.
-
-## Output Contract
-All outputs from `claude-mileage` should be:
-- Minimal (fewest tokens possible to convey the answer).
-- Formatted for immediate local use (e.g., clean diffs).
-- Summarized at the end for the local memory log.
+## 🛡️ Safety Boundaries
+- **No Data Storage:** Prompts are prepared in memory; only summaries are saved to `.mileage/`.
+- **No API Keys:** The tool relies on the user's existing authenticated Claude CLI session.
+- **Explicit Consent:** No prompt is sent to Anthropic without a manual user confirmation (unless `--yes` flag is used).
