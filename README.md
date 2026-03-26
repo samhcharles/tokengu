@@ -1,55 +1,98 @@
-# claude-mileage (token-tengu)
+# claude-mileage 👺
 
 > **Better mileage for Claude CLI workflows.**  
-> An unofficial, open-source local wrapper for Claude CLI focused on usage efficiency.
+> An unofficial, open-source local wrapper focused on usage efficiency.
 
 ---
 
-### ⚠️ UNOFFICIAL COMMUNITY PROJECT
-**This is an unofficial, community-driven open-source project.**
-- It is **NOT** affiliated with, endorsed by, sponsored by, or supported by Anthropic.
-- It does **NOT** provide Claude access; you must have your own Claude Pro subscription and the Claude CLI installed.
-- It does **NOT** bypass, circumvent, or defeat usage limits.
-- It is a local workflow wrapper designed to help you use your existing Claude Pro subscription more efficiently.
-- See [DISCLAIMER.md](./DISCLAIMER.md) and [TRADEMARK_NOTICE.md](./TRADEMARK_NOTICE.md) for full details.
+### ⚠️ Unofficial Community Project
+
+**This is an independent, community-built open-source tool.**
+
+- Not affiliated with, endorsed by, or supported by Anthropic  
+- Does not provide Claude access — you must use your own Claude CLI and account  
+- Does not bypass, modify, or extend usage limits  
+- Runs locally and prepares requests before calling the official Claude CLI  
+
+See [DISCLAIMER.md](./DISCLAIMER.md) and [TRADEMARK_NOTICE.md](./TRADEMARK_NOTICE.md) for details.
 
 ---
 
 ## The Thesis
-`claude-mileage` is an unofficial, open-source local wrapper for the Claude CLI. It is built for users who want to improve the efficiency of their existing workflow by reducing waste in context, output, and task flow.
 
-Most usage is often spent on unnecessary context, repeated raw data, and "chatty" thread histories. We believe in **mileage**: the practice of getting higher utility out of your message limit through better discipline and local-first tooling.
+`claude-mileage` is a local workflow wrapper for Claude CLI designed to reduce unnecessary usage and improve efficiency.
 
-> **Note on "Mileage over Max":** This is our internal shorthand for an efficiency-first workflow philosophy. It does not imply opposition to Anthropic’s pricing or a replacement for any Anthropic subscription tier. It simply means we prioritize reducing waste in the workflow a user already uses.
+In many workflows, usage is lost to:
+- oversized context
+- repeated inputs
+- long, unstructured threads
+- unnecessary output
 
-## What it is
-A terminal-native wrapper and workflow layer for the Claude CLI that encourages efficient usage habits:
-- **Tighter Context:** Automated pruning and context preview before sending.
-- **Smaller Tasks:** Breaking large requests into high-probability successes.
-- **Local Memory:** Keeping project-specific state locally instead of in the thread history.
-- **Summarization Pipeline:** Feeding Claude summaries of previous work instead of raw logs.
-- **Diff-First Coding:** Focused code updates that minimize output tokens.
-- **Launcher Mode:** (Optional) An opt-in dispatcher that lets `claude` act as a gateway to either the normal CLI or Mileage mode.
+This project focuses on **mileage** — getting more useful work out of the usage you already have through better workflow discipline.
 
-## What it does NOT do
-- It does **not** provide Claude access or sell Claude usage.
-- It does **not** bypass, alter, or defeat Anthropic’s limits, billing, or policies.
-- It does **not** proxy Anthropic accounts or subscriptions.
-- It does **not** replace the official Claude CLI; it prepares prompts locally and calls the real binary.
-
-## Who it is for
-- Terminal-native developers and writers.
-- Claude Pro ($20/mo) subscribers in the US/supported regions.
-- People who want better ROI on their daily message allotment.
-- Users who prefer local, inspectable, and hackable tools.
-
-## Who it is NOT for
-- Enterprise users with uncapped budgets.
-- Users looking for "jailbreaks" or TOS-evasive tools.
-- People who want a GUI-first "AI Platform."
-
-## Fully Open Source & Community Driven
-This project is built in public. We welcome contributors who care about CLI UX, efficiency-first workflows, and keeping AI tools local and honest. If you have a better strategy for reducing context waste or a cleaner way to handle local memory, we want your PRs.
+> **On “Mileage over Max”**  
+> This phrase is internal shorthand for an efficiency-first approach.  
+> It is not a statement about Anthropic’s pricing or subscription tiers.
 
 ---
-**Trademark Notice:** "Claude" is a trademark of Anthropic. This project uses the name nominatively to describe compatibility and its function as a wrapper for the Claude CLI.
+
+## What it is
+
+A terminal-native workflow layer that helps structure how requests are prepared before they are sent to Claude.
+
+It encourages:
+
+- **Tighter context** — send only what matters  
+- **Smaller tasks** — reduce failure and retries  
+- **Local memory** — avoid bloated conversation history  
+- **Summarization** — reuse compressed information instead of raw logs  
+- **Focused edits** — diff-first workflows for code  
+- **Optional launcher mode** — choose between standard Claude and mileage workflows  
+
+Everything happens locally. Your normal Claude CLI is still used for execution.
+
+---
+
+## What it is not
+
+- Not a replacement for Claude or any Anthropic service  
+- Not a proxy, API wrapper, or hosted tool  
+- Not a way to bypass limits or policies  
+- Not a system for accessing Claude outside official channels  
+
+---
+
+## Who it’s for
+
+- Developers and terminal-first users  
+- People using Claude CLI in day-to-day workflows  
+- Anyone who wants more predictable, efficient usage patterns  
+- Users who prefer local, inspectable tools  
+
+---
+
+## Who it’s not for
+
+- Users looking for automation-heavy or agent-based systems  
+- People expecting unlimited usage or altered limits  
+- GUI-first workflows or platform-style tools  
+
+---
+
+## Open Source
+
+This project is fully open source and built in public.
+
+Contributions are welcome — especially around:
+- context selection and compaction  
+- command design  
+- local memory strategies  
+- documentation and clarity  
+
+The goal is to keep the tool simple, transparent, and practical.
+
+---
+
+**Trademark Notice:**  
+“Claude” is a trademark of Anthropic.  
+This project uses the name only to describe compatibility with Claude CLI.
