@@ -1,13 +1,12 @@
-# claude-mileage 
+# token-tengu
 
-![claude-mileage banner](public/token-tengu-banner.png)
-> banner art "token-tengu" 
+![token-tengu banner](public/token-tengu-banner.png)
 
-`claude-mileage` is a local preparation layer for the Claude CLI. It improves workflow discipline by reducing context waste and grounding requests in specific local memory. 
+`token-tengu` is a local preparation layer for the Claude CLI. It improves workflow discipline by reducing context waste and grounding requests in specific local memory. 👺
 
 ## Concept
 
-When using AI through a CLI, context threads can quickly become noisy and unfocused. `claude-mileage` solves this by preparing your tasks locally. It ensures only high-signal context is sent to the model, using one-shot execution for every task.
+When using AI through a CLI, context threads can quickly become noisy and unfocused. `token-tengu` solves this by preparing your tasks locally. It ensures only high-signal context is sent to the model, using one-shot execution for every task.
 
 - **Local Memory**: Project state stays in your repository, not in cloud threads.
 - **One-Shot**: Every run is a fresh `claude -p` call to avoid session drift.
@@ -52,19 +51,19 @@ npm link
 
 1. **Initialize** your project:
    ```bash
-   claude-mileage init
+   token-tengu init
    ```
 2. **Pin** the files you are currently working on:
    ```bash
-   claude-mileage context pin src/index.ts
+   token-tengu context pin src/index.ts
    ```
 3. **Ask** a specific question or request a change:
    ```bash
-   claude-mileage ask "Refactor the command registration to be more modular"
+   token-tengu ask "Refactor the command registration to be more modular"
    ```
 4. **Review** your current changes:
    ```bash
-   claude-mileage diff "Explain these changes and check for regressions"
+   token-tengu diff "Explain these changes and check for regressions"
    ```
 
 ## Project Identity
@@ -74,7 +73,7 @@ npm link
 
 ## Contributing
 
-`claude-mileage` is a focused v0 project. We welcome contributions that improve the existing preparation loop, payload transparency, or reliability.
+`token-tengu` is a focused v0 project. We welcome contributions that improve the existing preparation loop, payload transparency, or reliability.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) and [ROADMAP.md](ROADMAP.md) for details.
 

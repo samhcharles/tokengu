@@ -1,6 +1,6 @@
 # Safety and Boundaries
 
-`claude-mileage` is built on a foundation of respect for the underlying service (Anthropic's Claude).
+`token-tengu` is built on a foundation of respect for the underlying service (Anthropic's Claude).
 
 ### 1. Respecting TOS
 We do not automate the "clicking" of buttons or the scraping of web interfaces. We wrap the official CLI, which is the intended way for terminal users to interact with the service.

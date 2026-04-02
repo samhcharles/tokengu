@@ -2,7 +2,7 @@
 
 **PLEASE READ THIS CAREFULLY.**
 
-`claude-mileage` is an unofficial, community-developed open-source project. 
+`token-tengu` is an unofficial, community-developed open-source project. 
 
 1. **Unofficial Project:** This project is **not** affiliated with, endorsed by, sponsored by, or supported by Anthropic.
 2. **No Access Provided:** This software does not provide access to Claude. To use this tool, you must have your own valid Claude account/subscription and the official Claude CLI installed and configured on your system.

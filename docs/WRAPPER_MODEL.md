@@ -1,9 +1,9 @@
 # The Wrapper Model: How it Works
 
-`claude-mileage` is a "Pass-Through" wrapper. It doesn't replace the official Claude CLI; it prepares the stage for it.
+`token-tengu` is a "Pass-Through" wrapper. It doesn't replace the official Claude CLI; it prepares the stage for it.
 
 ### The Flow
-1. **Command Input:** You type `claude-mileage ask "Fix the bug in auth.ts"`.
+1. **Command Input:** You type `token-tengu ask "Fix the bug in auth.ts"`.
 2. **Context Assembly:**
    - The wrapper looks at `auth.ts`.
    - It reads your local `.mileage/brief.md`.
@@ -19,6 +19,6 @@
 ### The Dispatcher (Launcher Mode)
 In launcher mode, we use a small shell script or binary named `claude` that lives earlier in your `PATH` than the official one. It checks for your preference and either:
 - Executes the official binary immediately (Normal mode).
-- Opens the `claude-mileage` interface.
+- Opens the `token-tengu` interface.
 
 This provides a seamless experience without breaking the underlying installation. It is entirely opt-in and reversible.

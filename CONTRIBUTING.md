@@ -1,6 +1,6 @@
-# Contributing to claude-mileage
+# Contributing to token-tengu
 
-`claude-mileage` is a small tool with a narrow scope. Contributions are welcome when they improve the existing preparation loop without expanding the product.
+`token-tengu` is a small tool with a narrow scope. Contributions are welcome when they improve the existing preparation loop without expanding the product.
 
 ## Good Contribution Targets
 

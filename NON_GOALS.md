@@ -1,6 +1,6 @@
 # Non-Goals
 
-`claude-mileage` is a local preparation layer. It does not pursue the following:
+`token-tengu` is a local preparation layer. It does not pursue the following:
 
 - **Bypassing limits**: It does not bypass, evade, or alter usage limits or rate limits.
 - **Providing access**: It does not provide Claude access; the user must already have the official Claude CLI configured locally.

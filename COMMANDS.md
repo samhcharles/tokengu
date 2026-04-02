@@ -1,6 +1,6 @@
 # Command Reference
 
-`claude-mileage` provides a minimal set of commands for context-focused workflows.
+`token-tengu` provides a minimal set of commands for context-focused workflows.
 
 ### init
 Initializes the `.mileage/` directory in the current workspace. This directory stores the local memory and configuration used to ground requests.

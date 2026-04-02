@@ -1,6 +1,6 @@
 # Local Memory Model
 
-A major source of workflow waste is the repeated re-explanation of project state. `claude-mileage` addresses this by moving working context from cloud thread history into small, explicit local files.
+A major source of workflow waste is the repeated re-explanation of project state. `token-tengu` addresses this by moving working context from cloud thread history into small, explicit local files.
 
 ### The `.mileage/` Concept
 Instead of relying on Claude to "remember" through a long chat history, we maintain a local directory that serves as the project's source of truth.

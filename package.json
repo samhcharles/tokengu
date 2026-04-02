@@ -1,7 +1,7 @@
 {
-  "name": "claude-mileage",
+  "name": "token-tengu",
   "version": "0.1.0",
-  "description": "Local-first preparation layer for Claude CLI",
+  "description": "Local-first context preparation layer for Claude CLI",
   "type": "module",
   "files": [
     "dist",
@@ -10,7 +10,7 @@
     "LICENSE"
   ],
   "bin": {
-    "claude-mileage": "./dist/index.js"
+    "token-tengu": "./dist/index.js"
   },
   "scripts": {
     "build": "tsc",

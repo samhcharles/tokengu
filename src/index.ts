@@ -9,7 +9,7 @@ import { memoryCommand } from './commands/memory.js';
 const program = new Command();
 
 program
-  .name('claude-mileage')
+  .name('token-tengu')
   .description('Local-first preparation layer for Claude CLI')
   .version('0.1.0');
 

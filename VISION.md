@@ -1,6 +1,6 @@
 # Vision: Efficient Workflows
 
-`claude-mileage` (token-tengu 👺) is a pivot toward **workflow efficiency**. 
+`token-tengu` (token-tengu 👺) is a pivot toward **workflow efficiency**. 
 
 A lot of current AI usage assumes that bigger context and bigger prompts are the only way to solve complex tasks. We believe that for most software engineering and knowledge work, the real bottleneck is **context management**. When a user hits a limit, it is often due to redundant context, repeated data, or sloppy task boundaries.
 

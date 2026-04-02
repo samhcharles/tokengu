@@ -1,6 +1,6 @@
 # Cache Policy
 
-`claude-mileage` caches for efficiency, not just speed.
+`token-tengu` caches for efficiency, not just speed.
 
 ### 1. Summary Caching
 When a large file is processed via `compact`, the summary is cached locally. If the file hash hasn't changed, the summary is reused in future prompts.

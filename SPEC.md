@@ -1,7 +1,7 @@
 # Technical Specification (v1)
 
 ## 🏗️ System Architecture
-`claude-mileage` (token-tengu 👺) is a local Node.js wrapper that sits between the user and the official `claude` binary. It is designed to be a "Zero-Dependency-on-API" tool—it interacts strictly with the CLI.
+`token-tengu` (token-tengu 👺) is a local Node.js wrapper that sits between the user and the official `claude` binary. It is designed to be a "Zero-Dependency-on-API" tool—it interacts strictly with the CLI.
 
 ## 📦 Core Pipeline Components
 
