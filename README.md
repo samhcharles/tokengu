@@ -2,11 +2,11 @@
 
 ![token-tengu banner](public/token-tengu-banner.png)
 
-`token-tengu` is a local preparation layer for the Claude CLI. It improves workflow discipline by reducing context waste and grounding requests in specific local memory. 👺
+`tokengu` aims to stretch your 20 dollar AI subscription without sacrificing its power. Context compaction as a whole improves workflow discipline by reducing context waste and grounding requests in specific local memory.
 
 ## Concept
 
-When using AI through a CLI, context threads can quickly become noisy and unfocused. `token-tengu` solves this by preparing your tasks locally. It ensures only high-signal context is sent to the model, using one-shot execution for every task.
+When using AI through a CLI, context threads can quickly become noisy and unfocused. `tokengu` solves this by preparing your tasks locally. It ensures only high-signal context is sent to the model, using one-shot execution for every task.
 
 - **Local Memory**: Project state stays in your repository, not in cloud threads.
 - **One-Shot**: Every run is a fresh `claude -p` call to avoid session drift.
